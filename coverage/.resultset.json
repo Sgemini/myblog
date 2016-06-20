@@ -1,0 +1,55 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/vincent/myblog/app/controllers/articles_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        3,
+        3,
+        3,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null
+      ],
+      "/home/vincent/myblog/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/vincent/myblog/app/models/article.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/vincent/myblog/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1457609755
+  }
+}
