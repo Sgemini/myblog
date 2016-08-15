@@ -1,9 +1,52 @@
-body {
-  background-color: pink;
+#home-welcome nav, .about, section, footer {
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
+/*---------------- header -----------------*/
+
 #home-welcome header{
-  width: 100%;
-  height: 300px;
+  width: 97%;
+  padding: 10px 10px 10px 30px;
   background-color: antiquewhite;
+  margin-right: 20px;
+}
+
+#home-welcome header h2 {
+  display: inline-block;
+  width: 90%;
+}
+
+/*---------------- nav -----------------*/
+
+#home-welcome nav {
+  background-color: aquamarine;
+  line-height: 30px;
+  padding: 0 30px;
+}
+
+/*---------------- address -----------------*/
+
+#home-welcome .about {
+  display: inline-block;
+  background-color: floralwhite;
+  width: 30%;
+  height: 300px;
+  margin-right: 20px;
+}
+
+/*---------------- section -----------------*/
+
+#home-welcome section {
+  display: inline-block;
+  width: 60%;
+  min-height: 200px;
+  background-color: aliceblue;
+}
+
+/*---------------- section -----------------*/
+
+#home-welcome footer {
+  background-color: deepskyblue;
+  line-height: 40px;
 }
