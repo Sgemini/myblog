@@ -1,13 +1,11 @@
 <template>
-  <h1>Sgemini's blog</h1>
+  
 </template>
 
 <script>
 export default {
-  name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
