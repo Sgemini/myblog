@@ -4,13 +4,15 @@
     <hr />
     <nav id='nav'>
       <ul>
-        <li>导航栏1</li>
+        <li>文章</li>
         <li>导航栏2</li>
         <li>导航栏3</li>
         <li>导航栏4</li>
       </ul>
     </nav>
-    <section id='section'></section>
+    <section id='section'>
+      <router-view></router-view>
+    </section>
     <address id='address'>
       <ul>
         <li><img src='./assets/aurora.jpg' id='avatar' /></li>
@@ -19,7 +21,6 @@
         <li>中国 广州</li>
       </ul>
     </address>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -36,6 +37,11 @@ export default {
 
   ul {
     list-style: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   #blog-title {
@@ -53,6 +59,7 @@ export default {
     min-width: 20%;
     border: 1px solid black;
     margin: 0 20px 20px 0;
+    text-indent: 20px;
   }
 
   #section {
@@ -60,17 +67,12 @@ export default {
     width: 60%;
     min-height: 500px;
     margin-right: 20px;
-    border: 1px solid black;
   }
 
   #address {
     float: left;
     min-width: 20%;
     border: 1px solid black;
-  }
-
-  #address ul {
-    padding-left: 0;
   }
 
   #address li {
