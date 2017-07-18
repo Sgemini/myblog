@@ -6,7 +6,7 @@
         <a :href="article.title">{{ article.title }}</a>
       </li>
     </ul>
-    <a class='more' href='https://my-blog.herokuapp.com/articles'>更多</a>
+    <a class='more' href='#/articles'>更多</a>
   </section>
 </template>
 
