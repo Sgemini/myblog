@@ -3,7 +3,7 @@
     <h2>所有文章</h2>
     <ul>
       <li v-for='article in articles'>
-        <a :href="article.title">{{ article.title }}</a>
+        <a :href="'#/articles/' + article.title">{{ article.title }}</a>
       </li>
     </ul>
     <a class='more' href='#/articles'>更多</a>
@@ -11,28 +11,22 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      articles: [
-        { title: 'article1' },
-        { title: 'article2' },
-        { title: 'article3' },
-        { title: 'article4' },
-        { title: 'article5' }
-      ]
+  export default {
+    data () {
+      return {
+        articles: [
+          { title: 'article1' },
+          { title: 'article2' },
+          { title: 'article3' },
+          { title: 'article4' },
+          { title: 'article5' }
+        ]
+      }
     }
+    // created () {
+    //   this.fetchData()
+    // },
   }
-  // created: {
-  //   articles = this.$http.get('/someUrl').then(response => {
-  //               // get body data
-  //               this.someData = response.body;
-
-  //              }, response => {
-  //                 // error callback
-  //              });
-  // }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
