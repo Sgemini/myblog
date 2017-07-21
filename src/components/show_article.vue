@@ -17,7 +17,8 @@
   export default {
     data () {
       return {
-        time: (new Date().getFullYear()) + '-' + (new Date().getMonth() + 1) + '-' + (new Date().getDate())
+        // time: dateFormat(new Date())
+        time: new Date()
       }
     },
     created () {

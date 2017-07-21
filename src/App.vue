@@ -4,15 +4,15 @@
     <hr />
     <nav id='nav'>
       <ul>
-        <li>文章</li>
+        <li><a href='#/articles'>文章</a></li>
         <li>导航栏2</li>
         <li>导航栏3</li>
         <li>导航栏4</li>
       </ul>
     </nav>
-    <section id='section'>
+    <main>
       <router-view></router-view>
-    </section>
+    </main>
     <address id='address'>
       <ul>
         <li><img src='./assets/aurora.jpg' id='avatar' /></li>
@@ -62,11 +62,13 @@ export default {
     text-indent: 20px;
   }
 
-  #section {
+  main {
     float: right;
     width: 60%;
     min-height: 500px;
     margin-right: 20px;
+    padding: 20px;
+    border: 1px solid black;
   }
 
   #address {

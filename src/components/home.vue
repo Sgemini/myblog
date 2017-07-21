@@ -1,6 +1,6 @@
 <template>
   <section id='articles-index'>
-    <h2>所有文章</h2>
+    <h2>最新文章</h2>
     <ul>
       <li v-for='article in articles'>
         <a :href="'#/articles/' + article.title">{{ article.title }}</a>
@@ -37,7 +37,6 @@
   }
   #articles-index {
     padding: 20px;
-    border: 1px solid black;
   }
 
   #articles-index ul li {
