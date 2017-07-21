@@ -17,7 +17,8 @@
   export default {
     data () {
       return {
-        time: App.DateFormat(new Date())
+        // time: dateFormat(new Date())
+        time: new Date()
       }
     },
     created () {

@@ -4,19 +4,22 @@
     <ul id='articles-list'>
       <li v-for='article in articles'>
         <a :href="'#/articles/' + article.title">{{ article.title }}</a>
-        <time id='article-time'>{{ App.DateFormat(article.created_at) }}</time>
+        <time id='article-time'>{{ dateFormat(article.created_at) }}</time>
       </li>
     </ul>
   </section>
 </template>
 <script>
+  import mixin from '@/share/share'
   export default {
+    mixins: [mixin],
     data () {
       return {
         articles: []
       }
     },
     created () {
+      console.log(this.dateFormat())
       this.$http.get('/articles').then(response => {
         this.$set(this, 'articles', response.body)
       })

@@ -13,10 +13,5 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
-  methods: {
-    DateFormat: function (date) {
-      return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
-    }
-  }
+  components: { App }
 })
