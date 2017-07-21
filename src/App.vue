@@ -4,7 +4,7 @@
     <hr />
     <nav id='nav'>
       <ul>
-        <li>文章</li>
+        <li><a href='#/articles'>文章</a></li>
         <li>导航栏2</li>
         <li>导航栏3</li>
         <li>导航栏4</li>

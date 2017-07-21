@@ -4,9 +4,12 @@
     <ul id='articles-list'>
       <li v-for='article in articles'>
         <a :href="'#/articles/' + article.title">{{ article.title }}</a>
-        <time id='article-time'>{{ dateFormat(article.created_at) }}</time>
+        <span id='article-time'>{{ dateFormat(article.created_at) }}</span>
       </li>
     </ul>
+    <footer>
+      <a href="#/">首页</a>
+    </footer>
   </section>
 </template>
 <script>
@@ -19,7 +22,6 @@
       }
     },
     created () {
-      console.log(this.dateFormat())
       this.$http.get('/articles').then(response => {
         this.$set(this, 'articles', response.body)
       })
@@ -34,5 +36,9 @@
 
   #article-time {
     float: right;
+  }
+
+  footer {
+    text-align: right;
   }
 </style>
