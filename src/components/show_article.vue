@@ -1,10 +1,10 @@
 <template>
   <article>
-    <h2>Hellow, article</h2>
-    <time>发布于 {{ time }}</time>
+    <h2>{{ article.title }}</h2>
+    <time>发布于{{ dateFormat(article.created_at) }}</time>
     <hr />
     <p>
-      这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章.
+      {{ article.body }}
     </p>
     <footer>
       <a class='return' href="#/articles">返回</a>
@@ -14,14 +14,18 @@
 </template>
 
 <script>
+  import mixin from '@/share/share'
   export default {
+    mixins: [mixin],
     data () {
       return {
-        // time: dateFormat(new Date())
-        time: new Date()
+        article: ''
       }
     },
     created () {
+      this.$http.get('http://localhost:3000/articles/' + this.$route.params.article).then(response => {
+        this.$set(this, 'article', response.body)
+      })
     }
   }
 </script>

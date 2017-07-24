@@ -3,8 +3,10 @@
     <h2>所有文章</h2>
     <ul id='articles-list'>
       <li v-for='article in articles'>
-        <a :href="'#/articles/' + article.title">{{ article.title }}</a>
-        <span id='article-time'>{{ dateFormat(article.created_at) }}</span>
+        <router-link :to="{ path: article.title, params: { article: article.title } }" append>
+          {{ article.title }}
+        </router-link>
+        <time id='article-time'>{{ dateFormat(article.created_at) }}</time>
       </li>
     </ul>
     <footer>
@@ -22,7 +24,7 @@
       }
     },
     created () {
-      this.$http.get('/articles').then(response => {
+      this.$http.get('http://localhost:3000/articles').then(response => {
         this.$set(this, 'articles', response.body)
       })
     }
