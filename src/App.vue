@@ -5,7 +5,7 @@
     <nav id='nav'>
       <ul>
         <li><a href='#/articles'>文章</a></li>
-        <li>导航栏2</li>
+        <li><a href='#/photoes'>游戏</a></li>
         <li>导航栏3</li>
         <li>导航栏4</li>
       </ul>
@@ -38,6 +38,10 @@ export default {
   ul {
     list-style: none;
     padding: 0;
+  }
+
+  ul li {
+    line-height: 30px;
   }
 
   a {
