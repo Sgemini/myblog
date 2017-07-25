@@ -12,6 +12,6 @@ export default new Router({
     { path: '/', component: Home },
     { path: '/articles', component: AllArticles },
     { path: '/articles/:article', component: ShowArticle },
-    { path: '/games', Component: Games }
+    { path: '/games', component: Games }
   ]
 })
