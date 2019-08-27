@@ -3,6 +3,7 @@
     <h1 id='blog-title'>Sgemini's blog</h1>
     <hr />
     <Nav />
+    <hr />
     <section>
       <h2>最新文章</h2>
       <ul>

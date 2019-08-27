@@ -22,4 +22,8 @@ ul {
   list-style: none;
 }
 
+#app {
+  background-color: lavender;
+}
+
 </style>

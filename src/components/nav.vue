@@ -1,5 +1,5 @@
 <template>
-  <nav id='nav'>
+  <nav>
     <ul>
       <li><a href='#/articles'>文章</a></li>
       <li><a href='#/games'>游戏</a></li>
@@ -16,5 +16,11 @@ export default {
 </script>
 
 <style scoped>
+  nav {
+    margin: 20px 0;
+  }
 
+  li {
+    font-size: 18px;
+  }
 </style>
