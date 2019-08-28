@@ -1,10 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li><a href='#/articles'>文章</a></li>
-      <li><a href='#/games'>游戏</a></li>
-      <li>导航栏3</li>
-      <li>导航栏4</li>
+      <li><a href='#articles-section'>文章</a></li>
+      <li><a href='#games-section'>游戏</a></li>
+      <li><a href='#shop-section'>商城</a></li>
     </ul>
   </nav>
 </template>

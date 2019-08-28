@@ -22,8 +22,14 @@ ul {
   list-style: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 #app {
+  height: 100%;
   background-color: lavender;
+  padding: 20px;
 }
 
 </style>
