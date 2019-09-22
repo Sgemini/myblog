@@ -4,6 +4,7 @@
       <li><a href='#articles-section'>文章</a></li>
       <li><a href='#games-section'>游戏</a></li>
       <li><a href='#shop-section'>商城</a></li>
+      <li><a href='/games/cuicanbaoshi'>璀璨宝石</a></li>
     </ul>
   </nav>
 </template>

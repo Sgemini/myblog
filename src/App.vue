@@ -27,7 +27,6 @@ html, body {
 }
 
 #app {
-  height: 100%;
   background-color: lavender;
   padding: 20px;
 }

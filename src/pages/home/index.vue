@@ -7,7 +7,7 @@
     <section class='section' id='articles-section'>
       <h2>最新文章</h2>
       <ul>
-        <li v-for='article in articles' v-bind:key='article.id'>
+        <li v-for='article in articles' :key='article.id'>
           <router-link :to="{ path: `/articles/${article.title}` }">
             {{ article.title }}
           </router-link>
