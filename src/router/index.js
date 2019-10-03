@@ -12,13 +12,13 @@ import CuiCanBaoShi from '@/assets/games/cuicanbaoshi'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  routes: [
-    { path: '/games/cuicanbaoshi', name: 'CuiCanBaoShi', component: CuiCanBaoShi },
-    { path: '/', name: 'Home', component: Home },
-    { path: '/articles', name: 'ArticleIndex', component: ArticleIndex },
-    { path: '/articles/:slug', name: 'ArticleShow', component: ArticleShow },
-    { path: '/games/', name: 'GameIndex', component: GameIndex },
-    { path: '/games/:slug', name: 'GameShow', component: GameShow }
-  ]
+    mode: 'history',
+    routes: [
+        { path: '/games/cuicanbaoshi', name: 'CuiCanBaoShi', component: CuiCanBaoShi },
+        { path: '/', name: 'Home', component: Home },
+        { path: '/articles', name: 'ArticleIndex', component: ArticleIndex },
+        { path: '/articles/:slug', name: 'ArticleShow', component: ArticleShow },
+        { path: '/games/', name: 'GameIndex', component: GameIndex },
+        { path: '/games/:slug', name: 'GameShow', component: GameShow }
+    ]
 })
