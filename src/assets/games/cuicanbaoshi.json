@@ -1,201 +1,241 @@
 {
     "lowland": [
         {
+            "id": "L1",
             "color": "white",
             "integral": 0,
             "cost": { "blue": 3 }
         },
         {
+            "id": "L2",
             "color": "white",
             "integral": 0,
             "cost": { "blue": 1, "green": 1, "red": 1, "black": 1 }
         },
         {
+            "id": "L3",
             "color": "white",
             "integral": 0,
             "cost": { "white": 3, "blue": 1, "black": 1 }
         },
         {
+            "id": "L4",
             "color": "white",
             "integral": 0,
             "cost": { "red": 2, "black": 1 }
         },
         {
+            "id": "L5",
             "color": "white",
             "integral": 0,
             "cost": { "blue": 2, "black": 2 }
         },
         {
+            "id": "L6",
             "color": "white",
             "integral": 1,
             "cost": { "green": 4 }
         },
         {
+            "id": "L7",
             "color": "white",
             "integral": 0,
             "cost": { "blue": 1, "green": 2, "red": 1, "black": 1 }
         },
         {
+            "id": "L8",
             "color": "white",
             "integral": 0,
             "cost": { "blue": 2, "green": 2, "black": 1 }
         },
         {
+            "id": "L9",
             "color": "red",
             "integral": 0,
             "cost": { "white": 2, "blue": 1, "green": 1, "black": 1 }
         },
         {
+            "id": "L10",
             "color": "red",
             "integral": 0,
             "cost": { "white": 3 }
         },
         {
+            "id": "L11",
             "color": "red",
             "integral": 0,
             "cost": { "white": 1, "red": 1, "black": 3 }
         },
         {
+            "id": "L12",
             "color": "red",
             "integral": 0,
             "cost": { "white": 2, "green": 1, "black": 2 }
         },
         {
+            "id": "L13",
             "color": "red",
             "integral": 1,
             "cost": { "white": 4 }
         },
         {
+            "id": "L14",
             "color": "red",
             "integral": 0,
             "cost": { "blue": 2, "green": 1 }
         },
         {
+            "id": "L15",
             "color": "red",
             "integral": 0,
             "cost": { "white": 1, "blue": 1, "green": 1, "black": 1 }
         },
         {
+            "id": "L16",
             "color": "red",
             "integral": 0,
             "cost": { "white": 2, "red": 2 }
         },
         {
+            "id": "L17",
             "color": "blue",
             "integral": 0,
             "cost": { "white": 1, "red": 1, "green": 1, "black": 1 }
         },
         {
+            "id": "L18",
             "color": "blue",
             "integral": 0,
             "cost": { "white": 1, "red": 2, "green": 1, "black": 1 }
         },
         {
+            "id": "L19",
             "color": "blue",
             "integral": 0,
             "cost": { "blue": 1, "red": 1, "green": 3 }
         },
         {
+            "id": "L20",
             "color": "blue",
             "integral": 0,
             "cost": { "green": 2, "black": 2 }
         },
         {
+            "id": "L21",
             "color": "blue",
             "integral": 0,
             "cost": { "white": 1, "black": 2 }
         },
         {
+            "id": "L22",
             "color": "blue",
             "integral": 0,
             "cost": { "black": 3 }
         },
         {
+            "id": "L23",
             "color": "blue",
             "integral": 0,
             "cost": { "white": 1, "red": 2, "green": 2 }
         },
         {
+            "id": "L24",
             "color": "blue",
             "integral": 1,
             "cost": { "red": 4 }
         },
         {
+            "id": "L25",
             "color": "black",
             "integral": 0,
             "cost": { "white": 1, "blue": 1, "green": 1, "red": 1 }
         },
         {
+            "id": "L26",
             "color": "black",
             "integral": 0,
             "cost": { "white": 2, "blue": 2, "red": 1 }
         },
         {
+            "id": "L27",
             "color": "black",
             "integral": 0,
             "cost": { "black": 1, "green": 1, "red": 3 }
         },
         {
+            "id": "L28",
             "color": "black",
             "integral": 0,
             "cost": { "white": 1, "blue": 2, "green": 1, "red": 1 }
         },
         {
+            "id": "L29",
             "color": "black",
             "integral": 1,
             "cost": { "blue": 4 }
         },
         {
+            "id": "L30",
             "color": "black",
             "integral": 0,
             "cost": { "white": 2, "green": 2 }
         },
         {
+            "id": "L31",
             "color": "black",
             "integral": 0,
             "cost": { "green": 3 }
         },
         {
+            "id": "L32",
             "color": "black",
             "integral": 0,
             "cost": { "green": 2, "red": 1 }
         },
         {
+            "id": "L33",
             "color": "green",
             "integral": 0,
             "cost": { "white": 1, "blue": 1, "black": 1, "red": 1 }
         },
         {
+            "id": "L34",
             "color": "green",
             "integral": 0,
             "cost": { "red": 3 }
         },
         {
+            "id": "L35",
             "color": "green",
             "integral": 0,
             "cost": { "white": 1, "blue": 1, "black": 2, "red": 1 }
         },
         {
+            "id": "L36",
             "color": "green",
             "integral": 0,
             "cost": { "blue": 1, "black": 2, "red": 2 }
         },
         {
+            "id": "L37",
             "color": "green",
             "integral": 0,
             "cost": { "blue": 2, "red": 2 }
         },
         {
+            "id": "L38",
             "color": "green",
             "integral": 0,
             "cost": { "white": 1, "blue": 3, "green": 1 }
         },
         {
+            "id": "L39",
             "color": "green",
             "integral": 0,
             "cost": { "white": 2, "blue": 1 }
         },
         {
+            "id": "L40",
             "color": "green",
             "integral": 1,
             "cost": { "black": 4 }
@@ -204,151 +244,181 @@
 
     "mediumland": [
         {
+            "id": "M1",
             "color": "white",
             "integral": 3,
             "cost": { "white": 6 }
         },
         {
+            "id": "M2",
             "color": "white",
             "integral": 1,
             "cost": { "white": 2, "red": 3, "blue": 3 }
         },
         {
+            "id": "M3",
             "color": "white",
             "integral": 2,
             "cost": { "green": 1, "red": 4, "black": 2 }
         },
         {
+            "id": "M4",
             "color": "white",
             "integral": 2,
             "cost": { "red": 5, "black": 3 }
         },
         {
+            "id": "M5",
             "color": "white",
             "integral": 1,
             "cost": { "green": 3, "red": 2, "black": 2 }
         },
         {
+            "id": "M6",
             "color": "white",
             "integral": 2,
             "cost": { "red": 5 }
         },
         {
+            "id": "M7",
             "color": "red",
             "integral": 3,
             "cost": { "red": 6 }
         },
         {
+            "id": "M8",
             "color": "red",
             "integral": 2,
             "cost": { "white": 1, "blue": 4, "green": 2 }
         },
         {
+            "id": "M9",
             "color": "red",
             "integral": 1,
             "cost": { "blue": 3, "red": 2, "black": 3 }
         },
         {
+            "id": "M10",
             "color": "red",
             "integral": 1,
             "cost": { "white": 2, "red": 2, "black": 3 }
         },
         {
+            "id": "M11",
             "color": "red",
             "integral": 2,
             "cost": { "black": 5 }
         },
         {
+            "id": "M12",
             "color": "red",
             "integral": 2,
             "cost": { "white": 3, "black": 5 }
         },
         {
+            "id": "M13",
             "color": "blue",
             "integral": 1,
             "cost": { "red": 3, "green": 2, "blue": 2 }
         },
         {
+            "id": "M14",
             "color": "blue",
             "integral": 3,
             "cost": { "blue": 6 }
         },
         {
+            "id": "M15",
             "color": "blue",
             "integral": 2,
             "cost": { "white": 2, "red": 1, "black": 4 }
         },
         {
+            "id": "M16",
             "color": "blue",
             "integral": 2,
             "cost": { "blue": 5 }
         },
         {
+            "id": "M17",
             "color": "blue",
             "integral": 2,
             "cost": { "white": 5, "blue": 3 }
         },
         {
+            "id": "M18",
             "color": "blue",
             "integral": 1,
             "cost": { "blue": 2, "green": 3, "black": 3 }
         },
         {
+            "id": "M19",
             "color": "black",
             "integral": 2,
             "cost": { "white": 5 }
         },
         {
+            "id": "M20",
             "color": "black",
             "integral": 1,
             "cost": { "white": 3, "blue": 2, "green": 2 }
         },
         {
+            "id": "M21",
             "color": "black",
             "integral": 2,
             "cost": { "blue": 1, "green": 4, "red": 2 }
         },
         {
+            "id": "M22",
             "color": "black",
             "integral": 3,
             "cost": { "black": 6 }
         },
         {
+            "id": "M23",
             "color": "black",
             "integral": 1,
             "cost": { "white": 3, "black": 2, "green": 3 }
         },
         {
+            "id": "M24",
             "color": "black",
             "integral": 2,
             "cost": { "green": 5, "red": 3 }
         },
         {
+            "id": "M25",
             "color": "green",
             "integral": 3,
             "cost": { "green": 6 }
         },
         {
+            "id": "M26",
             "color": "green",
             "integral": 2,
             "cost": { "green": 5 }
         },
         {
+            "id": "M27",
             "color": "green",
             "integral": 1,
             "cost": { "white": 3, "greeb": 2, "red": 3 }
         },
         {
+            "id": "M28",
             "color": "green",
             "integral": 1,
             "cost": { "white": 2, "blue": 3, "black": 2 }
         },
         {
+            "id": "M29",
             "color": "green",
             "integral": 2,
             "cost": { "blue": 5, "green": 3 }
         },
         {
+            "id": "M30",
             "color": "green",
             "integral": 2,
             "cost": { "white": 4, "blue": 2, "black": 1 }
@@ -357,101 +427,121 @@
 
     "highland": [
         {
+            "id": "H1",
             "color": "white",
             "integral": 4,
             "cost": { "black": 7 }
         },
         {
+            "id": "H2",
             "color": "white",
             "integral": 5,
             "cost": { "white": 3, "black": 7 }
         },
         {
+            "id": "H3",
             "color": "white",
             "integral": 3,
             "cost": { "blue": 3, "green": 3, "red": 5, "black": 3 }
         },
         {
+            "id": "H4",
             "color": "white",
             "integral": 4,
             "cost": { "white": 3, "red": 3, "black": 6 }
         },
         {
+            "id": "H5",
             "color": "red",
             "integral": 3,
             "cost": { "white": 3, "blue": 5, "green": 3, "black": 3 }
         },
         {
+            "id": "H6",
             "color": "red",
             "integral": 4,
             "cost": { "blue": 3, "red": 3, "green": 6 }
         },
         {
+            "id": "H7",
             "color": "red",
             "integral": 4,
             "cost": { "green": 7 }
         },
         {
+            "id": "H8",
             "color": "red",
             "integral": 5,
             "cost": { "green": 7, "red": 3 }
         },
         {
+            "id": "H9",
             "color": "blue",
             "integral": 4,
             "cost": { "white": 7 }
         },
         {
+            "id": "H10",
             "color": "blue",
             "integral": 3,
             "cost": { "white": 3, "red": 3, "blue": 3, "black": 5 }
         },
         {
+            "id": "H11",
             "color": "blue",
             "integral": 4,
             "cost": { "white": 6, "blue": 3, "black": 3 }
         },
         {
+            "id": "H12",
             "color": "blue",
             "integral": 5,
             "cost": { "white": 7, "blue": 3 }
         },
         {
+            "id": "H13",
             "color": "black",
             "integral": 5,
             "cost": { "black": 3, "red": 7 }
         },
         {
+            "id": "H14",
             "color": "black",
             "integral": 4,
             "cost": { "black": 3, "green": 3, "red": 6 }
         },
         {
+            "id": "H15",
             "color": "black",
             "integral": 3,
             "cost": { "white": 3, "blue": 3, "green": 5, "red": 3 }
         },
         {
+            "id": "H16",
             "color": "black",
             "integral": 4,
             "cost": { "red": 7 }
         },
         {
+            "id": "H17",
             "color": "green",
             "integral": 4,
             "cost": { "blue": 7 }
         },
         {
+            "id": "H18",
             "color": "green",
             "integral": 5,
             "cost": { "green": 3, "blue": 7 }
         },
         {
+            "id": "H19",
             "color": "green",
             "integral": 4,
             "cost": { "white": 3, "blue": 6, "green": 3 }
         },
         {
+            "id": "H20",
             "color": "green",
             "integral": 3,
             "cost": { "white": 5, "blue": 3, "black": 3, "red": 3 }
