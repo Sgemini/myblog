@@ -22,39 +22,13 @@
         </section>
 
         <section class='land-section'>
-            <span class='land-prompt'>低地区</span>
-            <div class='land-level'>
-                <div v-for='lowland in random(lowlands)' :key='lowland.id' class='land-card' :style="{backgroundColor: lowland.color}" :data-cost="lowland.cost">
-                    <div>颜色：{{lowland.color}}</div>
-                    <div>积分：{{lowland.integral}}</div>
-                    <div v-for='cost in Object.keys(lowland.cost)' :key='cost.key'>
-                        <div :class="cost + '-cost'"></div>
-                        <span>{{lowland.cost[cost]}}</span>
-                    </div>
-                </div>
-            </div>
-            <span class='land-prompt'>中地区</span>
-            <div class='land-level'>
-                <div v-for='mediumland in random(mediumlands)' :key='mediumland.id' class='land-card' :style="{backgroundColor: mediumland.color}" :data-cost="mediumland.cost">
-                    <div>颜色：{{mediumland.color}}</div>
-                    <div>积分：{{mediumland.integral}}</div>
-                    <div v-for='cost in Object.keys(mediumland.cost)' :key='cost.key'>
-                        <div :class="cost + '-cost'"></div>
-                        <span>{{mediumland.cost[cost]}}</span>
-                    </div>
-                </div>
-            </div>
-            <span class='land-prompt'>高地区</span>
-            <div class='land-level'>
-                <div v-for='highland in random(highlands)' :key='highland.id' class='land-card' :style="{backgroundColor: highland.color}" :data-cost="highland.cost">
-                    <div>颜色：{{highland.color}}</div>
-                    <div>积分：{{highland.integral}}</div>
-                    <div v-for='cost in Object.keys(highland.cost)' :key='cost.key'>
-                        <div :class="cost + '-cost'"></div>
-                        <span>{{highland.cost[cost]}}</span>
-                    </div>
-                </div>
-            </div>
+            <span class='land-prompt'>低地区（剩余{{lowlands.length}}张）</span>
+            <Card :cards='showLowlands' :chooseCard='chooseCard' land="low"/>
+            <span class='land-prompt'>中地区剩余{{mediumlands.length}}张）</span>
+            <Card :cards='showMediumlands' :chooseCard='chooseCard' land="medium"/>
+            <span class='land-prompt'>高地区剩余{{highlands.length}}张）</span>
+            <Card :cards='showHighlands' :chooseCard='chooseCard' land="high"/>
+            <button @click="buyCard">买卡</button>
         </section>
         <section class='assets-section'>
             <div class='currency-container'>
@@ -76,12 +50,15 @@
 
             </div>
         </section>
+        <Popup v-if='showPopup' :cancel='cancel' :confirm='confirm' />
     </div>
 </template>
 
 <script>
 import data from './cuicanbaoshi.json'
-console.log(data)
+import Popup from '../../components/Popup'
+import Card from './Card'
+// console.log(Popup)
 export default {
     data () {
         return {
@@ -94,18 +71,34 @@ export default {
             greenCurrency: 0,
             currencyCount: 8,
 
-            lowlands: data.lowland,
-            mediumlands: data.mediumland,
-            highlands: data.highland,
+            lowlands: this.random(data.lowland),
+            mediumlands: this.random(data.mediumland),
+            highlands: this.random(data.highland),
             blueLand: 0,
             redLand: 0,
             whiteLand: 0,
             blackLand: 0,
             greenLand: 0,
             seizureLand: [],
+            showLowlands: [],
+            showMediumlands: [],
+            showHighlands: [],
 
-            chooseUniversalCurrency: false
+            chooseUniversalCurrency: false,
+            selectedCard: {},
+            showPopup: false
         }
+    },
+    created () {
+        this.showLowlands = this.lowlands.slice(0, 4)
+        this.showMediumlands = this.mediumlands.slice(0, 4)
+        this.showHighlands = this.highlands.slice(0, 4)
+        this.lowlands = this.lowlands.filter(val => !this.showLowlands.includes(val))
+        this.mediumlands = this.mediumlands.filter(val => !this.showMediumlands.includes(val))
+        this.highlands = this.highlands.filter(val => !this.showHighlands.includes(val))
+    },
+    components: {
+        Popup, Card
     },
     methods: {
         handleClick: function () {
@@ -126,12 +119,30 @@ export default {
             this.currencies = []
         },
         random: function (array) {
-            let m = array.length, i;
+            let m = array.length
+            let i = null
             while (m) {
                 i = (Math.random() * m--) >>> 0;
                 [array[m], array[i]] = [array[i], array[m]]
             }
-            return array;
+            return array
+        },
+
+        chooseCard: function (card, land) {
+            this.showPopup = true
+            this.selectedCard = card
+            debugger
+        },
+
+        cancel: function () {
+            this.showPopup = false
+        },
+
+        confirm: function () {
+            this.showPopup = false
+        },
+        buyCard: function () {
+
         }
     }
 }
@@ -148,27 +159,6 @@ export default {
         }
     }
 
-    .land-level::-webkit-scrollbar { display:none }
-
-    .land-section {
-        .land-level {
-            display: flex;
-            align-items: center;
-            overflow-x: auto;
-            margin-bottom: 30px;
-        }
-        .land-prompt {
-            margin-right: 20px;
-        }
-        .land-card {
-            border: 1px solid black;
-            width: 100px;
-            height: 125px;
-            flex-shrink: 0;
-            margin-right: 10px;
-        }
-    }
-
     .assets-section {
         display: flex;
         .currency-container, .land-container {
@@ -177,33 +167,6 @@ export default {
         .assets-section--land {
 
         }
-    }
-
-    .blue-cost, .red-cost, .black-cost, .white-cost, .green-cost {
-        display: inline-block;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-    }
-
-    .blue-cost {
-        background-color: blue;
-    }
-
-    .red-cost {
-        background-color: red;
-    }
-
-    .black-cost {
-        background-color: black;
-    }
-
-    .white-cost {
-        background-color: white;
-    }
-
-    .green-cost {
-        background-color: green;
     }
 
 </style>

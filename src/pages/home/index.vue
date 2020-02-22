@@ -1,69 +1,23 @@
 <template>
     <div id='articles-index'>
-        <h1 id='blog-title'>Sgemini's blog</h1>
+        <h1 id='blog-title'>毛叔叔博客</h1>
         <hr />
-        <Nav />
+        <!-- <Nav /> -->
         <hr />
         <section class='section' id='articles-section'>
-            <h2>最新文章</h2>
+            <!-- <h2>最新文章</h2> -->
             <ul>
-                <li v-for='article in articles' :key='article.id'>
-                <router-link :to="{ path: `/articles/${article.title}` }">
-                    {{ article.title }}
-                </router-link>
-                <time id='article-time'>{{ dateFormat(article.created_at) }}</time>
+                <li v-for='article in articles' :key='article.id' class='article'>
+                    <router-link :to="{ path: `/articles/${article.title}` }">
+                        <h3 class='artcile-title'>{{article.title}}</h3>
+                        <div class='artcile-description'>{{article.body}}</div>
+                        <time id='article-time'>{{ dateFormat(article.created_at) }}</time>
+                    </router-link>
                 </li>
             </ul>
-            <a class='more' href='/articles'>更多</a>
+            <!-- <a class='more' href='/articles'>更多</a> -->
         </section>
         <hr />
-        <section class='section' id='games-section'>
-            <h2>游戏</h2>
-            <ul class='list-container'>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    <span>2048</span>
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-                <li class='game-item'>
-                <router-link :to="{ path: 'games/2048' }">
-                    <img class='game-pic' alt='2048' />
-                    敬请期待
-                </router-link>
-                </li>
-            </ul>
-        </section>
     </div>
 </template>
 
@@ -105,6 +59,14 @@ export default {
         #articles-index ul li {
             line-height: 30px;
         }
+
+        .article {
+            border-bottom: 1px solid black;
+        }
+        .artcile-title {
+            font-size: 24px;
+        }
+
     }
 
     .section {

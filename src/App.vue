@@ -27,8 +27,13 @@ html, body {
 }
 
 #app {
-    background-color: lavender;
+    /* background-color: lavender; */
     padding: 20px;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
 }
 
 </style>
