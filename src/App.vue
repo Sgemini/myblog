@@ -28,7 +28,6 @@ html, body {
 
 #app {
     /* background-color: lavender; */
-    padding: 20px;
     height: 100vh;
 }
 

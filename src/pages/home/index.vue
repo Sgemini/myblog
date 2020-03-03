@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import date from '../../share/date'
+import date from '../../share/methods'
 import Nav from '../../components/nav.vue'
 
 import axios from 'axios'
