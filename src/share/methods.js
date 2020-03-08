@@ -16,15 +16,16 @@ const getCookie = name => {
 }
 
 const setCookie = (name, value, expires) => {
-    let today = new Date()
-    today.setTime(today.getTime())
-    if (expires) {
-        expires = expires * 1000 * 60 * 60 * 24
-    }
-    let expiresDate = new Date(today.getTime() + expires)
-    document.cookie = name + '=' + escape(value) + (expires ? ';expires=' + expiresDate.toGMTString() : '')
+    // let today = new Date()
+    // today.setTime(today.getTime())
+    // if (expires) {
+    //     expires = expires * 1000 * 60 * 60 * 24
+    // }
+    // let expiresDate = new Date(today.getTime() + expires)
+    document.cookie = name + '=' + escape(value)
 }
 
 export {
-    getCookie, setCookie
+    getCookie, setCookie,
+    dateFormat
 }

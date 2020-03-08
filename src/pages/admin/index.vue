@@ -44,7 +44,7 @@
 <script>
 export default {
     created () {
-        if (!this.$getCookie('auth_token')) {
+        if (!this.$getCookie('token')) {
             this.$router.push({
                 path: '/admin/login'
             })

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { getCookie, setCookie } from '@/share/methods'
+import FetchApi from '@/share/axios'
 import {
     Input, Button,
     Menu, Submenu, MenuItem, MenuItemGroup,
@@ -31,6 +32,7 @@ Vue.use(Dialog)
 
 Vue.prototype.$getCookie = getCookie
 Vue.prototype.$setCookie = setCookie
+Vue.prototype.$fetchApi = FetchApi
 
 export default new Router({
     mode: 'history',

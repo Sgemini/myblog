@@ -2,14 +2,13 @@
     <div class='login'>
         <el-form :model="loginForm" status-icon :rules="loginRules" ref="loginForm" label-width="100px" class='login--form'>
             <el-form-item label="邮箱" prop="email">
-                <el-input type="password" v-model="loginForm.email" autocomplete="off"></el-input>
+                <el-input type="text" v-model="loginForm.email" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
                 <el-input type="password" v-model="loginForm.password" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="submitForm('loginForm')">提交</el-button>
-                <el-button @click="resetForm('loginForm')">重置</el-button>
+                <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -21,12 +20,31 @@ export default {
         return {
             loginForm: {
                 email: '',
-                passwrod: ''
+                password: ''
             },
             loginRules: {
                 email: [{ required: true }],
                 password: [{ required: true }]
             }
+        }
+    },
+
+    methods: {
+        submitForm (formName) {
+            this.$refs[formName].validate((valid) => {
+                if (valid) {
+                    this.$fetchApi('POST', 'auth/login', {
+                        email: this.loginForm.email,
+                        password: this.loginForm.password
+                    }).then(res => {
+                        this.$setCookie('token', res.token)
+                        this.$router.push({ path: '/admin' })
+                    })
+                } else {
+                    console.log('error submit!!')
+                    return false
+                }
+            })
         }
     }
 }
@@ -39,6 +57,8 @@ export default {
     }
     .login--form {
         width: 50%;
+        padding-top: 20%;
+        margin: 0 auto;
     }
 
 </style>
@@ -50,5 +70,4 @@ export default {
             color: white;
         }
     }
-
 </style>
